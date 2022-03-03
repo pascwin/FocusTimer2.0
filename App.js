@@ -6,7 +6,7 @@ import { Timer } from "./src/features/Timer/Timer";
 
 export default function App() {
 
-  const [subject, setSubject] = useState(null)
+  const [subject, setSubject] = useState("Gardening")
 
   return (
     <>
