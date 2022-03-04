@@ -25,6 +25,8 @@ export const Countdown = ({
       return timeLeft
     })
   }
+
+  const reset = () => setMilliseconds(minutesToMillis(minutes))
   
   useEffect(() => {
     setMilliseconds(minutesToMillis(minutes))
@@ -33,7 +35,7 @@ export const Countdown = ({
   useEffect(() => {
     onProgress(milliseconds / minutesToMillis(minutes))
     if(milliseconds === 0) {
-      onEnd();
+      onEnd(reset);
     }
   },[milliseconds])
 
